@@ -4638,7 +4638,7 @@ ngSoundManager.factory('angularPlayer', ['$rootScope', '$log',
                     //$log.debug('song does not exists in playlist');
                     //add to playlist
 
-                        $('.broken-link').remove();
+                        // $('.broken-link').remove();
                         this.addToPlaylist(track);
                     
                         //add to sound manager
@@ -4668,7 +4668,7 @@ ngSoundManager.factory('angularPlayer', ['$rootScope', '$log',
                         //$('<div>Track url is dead!</div>').insertBefore('.nowplaying').delay(3000).fadeOut();
                         if (error.status === 401 || error.status === 404) {
                             bindContext.removeSong(track.id, playlist.length - 1);
-                            $('.has-footer').prepend("<div class='broken-link' style='color:red;''>...yeahhh, that SouncCloud link is broken, you're gonna wanna try a different one.</div>");
+                            // $('.has-footer').prepend("<div class='broken-link' style='color:red;''>...yeahhh, that SouncCloud link is broken, you're gonna wanna try a different one.</div>");
                         }
                     });
 
