@@ -4666,7 +4666,7 @@ ngSoundManager.factory('angularPlayer', ['$rootScope', '$log',
                         // $rootScope.$broadcast('player:playlist', playlist);
                     }.bind(this)).error(function(error) {
                         //$('<div>Track url is dead!</div>').insertBefore('.nowplaying').delay(3000).fadeOut();
-                        if (error.status === 401) {
+                        if (error.status === 401 || error.status === 404) {
                             bindContext.removeSong(track.id, playlist.length - 1);
                             $('.has-footer').prepend("<div class='broken-link' style='color:red;''>...yeahhh, that SouncCloud link is broken, you're gonna wanna try a different one.</div>");
                         }
